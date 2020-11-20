@@ -1,9 +1,9 @@
-const setupFirst = ()=> console.log('Setting up the before test preconditions');
-const tearDown = ()=> console.log('clearing the junk and closing the test');
+const setupFirst = ()=> console.log('Setting up all the preconditions at once in the beginning');
+const tearDown = ()=> console.log('Closing the test once after all the tests are executed');
 
 describe('new account creation test',()=>{
     
-    beforeEach(()=> setupFirst());
+    beforeAll(()=> setupFirst());
     
     
     test('test new account1 is created',()=>{
@@ -16,5 +16,5 @@ describe('new account creation test',()=>{
         expect(account).toEqual('account2');  
      });
 
-    afterEach(()=> tearDown());
+    afterAll(()=> tearDown());
 });
