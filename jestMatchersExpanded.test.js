@@ -27,4 +27,20 @@ test('null check',()=>{
     expect(n).toBeFalsy();
     expect(n).not.toBeUndefined();
     expect(n).not.toBeTruthy();
+});
+
+//Array Matchers:
+
+const carStock = ['BMW','Audi','Ferrari','Lamborghini','Mercedes','Toyota','Nano','Desire'];
+
+test('that the carStock array conatins Audi',()=>{
+    expect(carStock).toContain('Audi');
+})
+
+test('that the carStock array conatins BMW',()=>{
+    expect(carStock).toContain('BMW');
+})
+
+test('that the carStock array conatins Lamborghini',()=>{
+    expect(carStock).toContain('Lamborghini');
 })
