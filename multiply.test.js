@@ -10,8 +10,8 @@ describe('test multiply positive scenario',()=>{
     });
     
     test('Objects Comparision Test',()=>{
-       const data = {'first':"1"};
-       data['second']= "2";
+       const data = {"first":"1"};
+       data["second"]= "2";
        expect(data).toEqual({"first":"1", "second":"2"});
     });
 });
